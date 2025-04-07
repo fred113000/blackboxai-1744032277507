@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Garage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-2xl font-bold">Dashboard Garage</h1>
+        <div class="mt-2">
+            <input type="text" id="search" placeholder="Rechercher par ville ou code postal (ex: Paris, 75000)" 
+                   class="w-full p-2 rounded border border-gray-300">
+        </div>
+    </header>
+    <main class="p-4">
+        <section>
+            <h2 class="text-xl font-semibold">Disponibilités</h2>
+            <div id="calendar" class="border rounded p-4 mt-2 bg-white">
+                <!-- Calendar will be generated here -->
+            </div>
+        </section>
+        <section class="mt-6">
+            <h2 class="text-xl font-semibold">Gérer les Rendez-vous</h2>
+            <div id="appointments" class="border rounded p-4 mt-2 bg-white">
+                <!-- Appointment management will be displayed here -->
+            </div>
+        </section>
+        <section class="mt-6">
+            <h2 class="text-xl font-semibold">Ajouter Disponibilité</h2>
+            <form id="availability-form" class="flex flex-col mt-2 bg-white p-4 rounded border">
+                <input type="date" id="date" class="border rounded p-2 mb-2" required>
+                <input type="time" id="start-time" class="border rounded p-2 mb-2" required>
+                <input type="time" id="end-time" class="border rounded p-2 mb-2" required>
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Ajouter Disponibilité</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
